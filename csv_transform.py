@@ -15,3 +15,4 @@ df = pd.DataFrame(data, columns=columns)
 df_t = df.pivot_table(values=[columns[1]], index=[columns[0]], columns=[
                       columns[2]], aggfunc='sum', fill_value='N/A')
 print(df_t)
+df_t.to_excel('out.xls', index=True)
